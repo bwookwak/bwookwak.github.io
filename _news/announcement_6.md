@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-:tada: Three papers about Long-CoT, Scene Graph Generation, and LLM Simulation of Psychological Patients have been accepted to <b>ACL 2025</b>.
+:tada: Three papers about Long-CoT, Scene Graph Generation, and LLM Simulation of Psychological Patients have been accepted to <strong>ACL 2025</strong>.

@@ -113,22 +113,22 @@
   contents:
     - title: Reviewer
       items:
-        - <b>AAAI</b>, <b>EMNLP</b>, <b>ACL</b>, <b>NAACL</b>
+        - <strong>AAAI</strong>, <strong>EMNLP</strong>, <strong>ACL</strong>, <strong>NAACL</strong>
     - title: Teaching Experiences
       items:
-        - "<b>NVIDIA</b>: Teaching Assistant on NLP"
-        - "<b>Teaching Assistant at Yonsei Univ</b>: Text and Language Understanding, Big Data, Natural Language Processing"
+        - "<strong>NVIDIA</strong>: Teaching Assistant on NLP"
+        - "<strong>Teaching Assistant at Yonsei Univ</strong>: Text and Language Understanding, Big Data, Natural Language Processing"
     - title: Company Experiences
       items:
-        - <b>Microsoft Research Asia (MSRA)</b>, Beijing, China - Research Scientist Intern (Jun 2025 - Dec 2025)
-        - <b>Amazon AGI Foundational Models Group</b>, Sunnyvale, CA, USA - Applied Scientist Intern (Jun 2024 - Sep 2024)
-        - <b>Amazon Alexa AI</b>, Sunnyvale, CA, USA - Applied Scientist Intern (Jun 2023 - Sep 2023)
+        - <strong>Microsoft Research Asia (MSRA)</strong>, Beijing, China - Research Scientist Intern (Jun 2025 - Dec 2025)
+        - <strong>Amazon AGI Foundational Models Group</strong>, Sunnyvale, CA, USA - Applied Scientist Intern (Jun 2024 - Sep 2024)
+        - <strong>Amazon Alexa AI</strong>, Sunnyvale, CA, USA - Applied Scientist Intern (Jun 2023 - Sep 2023)
     - title: Honors and Awards
       items:
-        - <b>Encouragement Prize</b>, Korea Capstone Design Fair (As a representative of Yonsei University) - Ministry of Trade, Industry and Energy, Korea
-        - <b>Top Prize</b>, Software Capstone Design - Computer Science Department, Yonsei Univ
-        - <b>Top Presentation Prize</b>, Yonsei Creative Exhibition Presentation - College of Engineering, Yonsei Univ
-        - <b>Student Teaching Assistant Scholarship</b> (Head Professor TA) - Department of Artificial Intelligence, Yonsei Univ
+        - <strong>Encouragement Prize</strong>, Korea Capstone Design Fair (As a representative of Yonsei University) - Ministry of Trade, Industry and Energy, Korea
+        - <strong>Top Prize</strong>, Software Capstone Design - Computer Science Department, Yonsei Univ
+        - <strong>Top Presentation Prize</strong>, Yonsei Creative Exhibition Presentation - College of Engineering, Yonsei Univ
+        - <strong>Student Teaching Assistant Scholarship</strong> (Head Professor TA) - Department of Artificial Intelligence, Yonsei Univ
 # - title: Academic Interests
 #   type: nested_list
 #   contents:

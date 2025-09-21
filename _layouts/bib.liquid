@@ -85,10 +85,10 @@
           {%- if forloop.last and author_array_limit == author_array_size %}and {% endif -%}
         {% endif %}
         {%- if author_is_self -%}
-          <em>
+          <strong>
             {{- author.first }}
             {{ author_last_html -}}
-          </em>
+          </strong>
         {%- else -%}
           {%- if coauthor_url -%}
             <a href="{{ coauthor_url }}">
@@ -200,6 +200,74 @@
       {% endif %}
       {% if entry.arxiv %}
         <a href="http://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button">arXiv</a>
+      {% endif %}
+      {% comment %} Venue button {% endcomment %}
+      {% assign venue_name = '' %}
+      {% assign venue_year = '' %}
+      {% assign venue_track = '' %}
+      {% if entry.year %}
+        {% assign venue_year = entry.year %}
+      {% endif %}
+      {% if entry.type == 'article' and entry.journal %}
+        {% assign venue_name = entry.journal %}
+      {% elsif entry.booktitle %}
+        {% assign venue_name = entry.booktitle %}
+        {% comment %} Extract conference abbreviation from booktitle {% endcomment %}
+        {% if entry.booktitle contains 'EMNLP' %}
+          {% if entry.booktitle contains 'Findings' %}
+            {% assign venue_name = 'EMNLP' %}
+            {% assign venue_track = '(Findings)' %}
+          {% else %}
+            {% assign venue_name = 'EMNLP' %}
+          {% endif %}
+        {% elsif entry.booktitle contains 'Empirical Methods in Natural Language Processing' %}
+          {% if entry.booktitle contains 'Findings' %}
+            {% assign venue_name = 'EMNLP' %}
+            {% assign venue_track = '(Findings)' %}
+          {% else %}
+            {% assign venue_name = 'EMNLP' %}
+          {% endif %}
+        {% elsif entry.booktitle contains 'NeurIPS' or entry.booktitle contains 'Neural Information Processing Systems' %}
+          {% if entry.booktitle contains 'Spotlight' %}
+            {% assign venue_name = 'NeurIPS' %}
+            {% assign venue_track = '(Spotlight)' %}
+          {% else %}
+            {% assign venue_name = 'NeurIPS' %}
+          {% endif %}
+        {% elsif entry.booktitle contains 'Association for Computational Linguistics' %}
+          {% comment %} Check for special tracks first {% endcomment %}
+          {% if entry.booktitle contains 'Findings' %}
+            {% if entry.booktitle contains 'NAACL' or entry.booktitle contains 'North American Chapter' %}
+              {% assign venue_name = 'NAACL' %}
+              {% assign venue_track = '(Findings)' %}
+            {% elsif entry.booktitle contains 'ACL' or entry.booktitle contains 'Annual Meeting' %}
+              {% assign venue_name = 'ACL' %}
+              {% assign venue_track = '(Findings)' %}
+            {% elsif entry.booktitle contains 'EMNLP' or entry.booktitle contains 'Empirical Methods' %}
+              {% assign venue_name = 'EMNLP' %}
+              {% assign venue_track = '(Findings)' %}
+            {% endif %}
+          {% elsif entry.booktitle contains 'Industry' %}
+            {% if entry.booktitle contains 'NAACL' or entry.booktitle contains 'North American Chapter' %}
+              {% assign venue_name = 'NAACL' %}
+              {% assign venue_track = '(Industry)' %}
+            {% elsif entry.booktitle contains 'ACL' or entry.booktitle contains 'Annual Meeting' %}
+              {% assign venue_name = 'ACL' %}
+              {% assign venue_track = '(Industry)' %}
+            {% endif %}
+          {% elsif entry.booktitle contains 'Annual Meeting' %}
+            {% assign venue_name = 'ACL' %}
+          {% elsif entry.booktitle contains 'North American Chapter' %}
+            {% assign venue_name = 'NAACL' %}
+          {% endif %}
+        {% elsif entry.booktitle contains 'AAAI' %}
+          {% assign venue_name = 'AAAI' %}
+        {% endif %}
+      {% endif %}
+      {% if venue_name != '' %}
+        <span class="btn btn-sm z-depth-0 venue-btn" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; cursor: default; font-weight: 500; border-radius: 15px; padding: 4px 12px; text-transform: none;">
+          {{- venue_name }} {{ venue_year }} {{ venue_track -}}
+        </span>
       {% endif %}
       {% if entry.bibtex_show %}
         <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>

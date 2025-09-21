@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-:sparkles: I will be joining <b>Microsoft Research Asia (MSRA)</b> as an intern this summer. Under supervision of Dr. Liang Wang, Dr. Nan Yang, Dr. Xingxing Zhang.
+:sparkles: I will be joining <strong>Microsoft Research Asia (MSRA)</strong> as an intern this summer. Under supervision of Dr. Liang Wang, Dr. Nan Yang, Dr. Xingxing Zhang.

@@ -5,6 +5,6 @@ inline: true
 related_posts: false
 ---
 
-:sparkles: I am joining <b>Amazon Alexa AI</b> as an Applied Scientist intern, primary mentors:
+:sparkles: I am joining <strong>Amazon Alexa AI</strong> as an Applied Scientist intern, primary mentors:
 Dr. Hann Wang, Dr. Nikolaos Malandrakis and Dr. Nagesh Panyam, and Managed by Dr.
 Angeliki Metallinou. Can’t wait!

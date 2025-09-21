@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-:tada: Our <b>"Web-Sheperd"</b> on the Process Reward Model of Web Agent got accepted to <b>NeuIPS 2025</b> Spotlight.
+:tada: Our <strong>"Web-Sheperd"</strong> on the Process Reward Model of Web Agent got accepted to <strong>NeuIPS 2025</strong> Spotlight.

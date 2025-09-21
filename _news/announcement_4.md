@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-:tada: Our <b>"Pearl"</b> on the Review-driven, Persona-grounded Conversational Recommentation is accepted to <b>ACL 2024</b>.
+:tada: Our <strong>"Pearl"</strong> on the Review-driven, Persona-grounded Conversational Recommentation is accepted to <strong>ACL 2024</strong>.

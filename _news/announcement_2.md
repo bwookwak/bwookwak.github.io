@@ -5,5 +5,5 @@ inline: true
 related_posts: false
 ---
 
-:sparkles: I am returning to <b>Amazon AGI Foundational Models Group</b> (the group name
+:sparkles: I am returning to <strong>Amazon AGI Foundational Models Group</strong> (the group name
 has changed) as an Applied Scientist intern.

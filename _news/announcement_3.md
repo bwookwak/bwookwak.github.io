@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-:tada: Two papers about Algorithmic Reasoning in LLMs and NL Feedback on Coding Agents have been accepted to <b>EMNLP 2024</b>.
+:tada: Two papers about Algorithmic Reasoning in LLMs and NL Feedback on Coding Agents have been accepted to <strong>EMNLP 2024</strong>.
