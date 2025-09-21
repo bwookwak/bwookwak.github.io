@@ -265,8 +265,13 @@
         {% endif %}
       {% endif %}
       {% if venue_name != '' %}
-        <span class="btn btn-sm z-depth-0 venue-btn" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; cursor: default; font-weight: 500; border-radius: 15px; padding: 4px 12px; text-transform: none;">
-          {{- venue_name }} {{ venue_year }} {{ venue_track -}}
+        <span
+          class="btn btn-sm z-depth-0 venue-btn"
+          style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; cursor: default; font-weight: 500; border-radius: 15px; padding: 4px 12px; text-transform: none;"
+        >
+          {{- venue_name }}
+          {{ venue_year }}
+          {{ venue_track -}}
         </span>
       {% endif %}
       {% if entry.bibtex_show %}
