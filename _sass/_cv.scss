@@ -205,7 +205,7 @@ td.list-group-link {
 }
 
 .timeline-container::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   top: 0;
@@ -234,7 +234,7 @@ td.list-group-link {
 }
 
 .timeline-item-left::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 10px;
   height: 10px;
@@ -248,7 +248,7 @@ td.list-group-link {
 }
 
 .timeline-item-right::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 10px;
   height: 10px;
@@ -265,7 +265,7 @@ td.list-group-link {
   background: #f8f9fa;
   padding: 10px 15px;
   border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   cursor: pointer;
   position: relative;
@@ -284,7 +284,7 @@ td.list-group-link {
 
 .timeline-content:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .timeline-title {
@@ -353,19 +353,19 @@ td.list-group-link {
   position: absolute;
   left: 50%;
   top: 0;
-  content: ' ';
+  content: " ";
   display: block;
   width: 6px;
   height: 100%;
   margin-left: -3px;
-  background: rgb(80,80,80);
-  background: -moz-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(125,185,232,1)));
-  background: -webkit-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
-  background: -o-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
-  background: -ms-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
-  background: linear-gradient(to bottom, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
-  
+  background: rgb(80, 80, 80);
+  background: -moz-linear-gradient(top, rgba(80, 80, 80, 0) 0%, rgb(80, 80, 80) 8%, rgb(80, 80, 80) 92%, rgba(80, 80, 80, 0) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(30, 87, 153, 1)), color-stop(100%, rgba(125, 185, 232, 1)));
+  background: -webkit-linear-gradient(top, rgba(80, 80, 80, 0) 0%, rgb(80, 80, 80) 8%, rgb(80, 80, 80) 92%, rgba(80, 80, 80, 0) 100%);
+  background: -o-linear-gradient(top, rgba(80, 80, 80, 0) 0%, rgb(80, 80, 80) 8%, rgb(80, 80, 80) 92%, rgba(80, 80, 80, 0) 100%);
+  background: -ms-linear-gradient(top, rgba(80, 80, 80, 0) 0%, rgb(80, 80, 80) 8%, rgb(80, 80, 80) 92%, rgba(80, 80, 80, 0) 100%);
+  background: linear-gradient(to bottom, rgba(80, 80, 80, 0) 0%, rgb(80, 80, 80) 8%, rgb(80, 80, 80) 92%, rgba(80, 80, 80, 0) 100%);
+
   z-index: 5;
 }
 
@@ -397,33 +397,44 @@ td.list-group-link {
 .connoriginal-flag-wrapper {
   position: relative;
   display: inline-block;
-  
+
   text-align: center;
 }
 
 .connoriginal-flag {
   position: relative;
   display: inline;
-  background: rgb(248,248,248);
+  background: rgb(248, 248, 248);
   padding: 6px 10px;
   border-radius: 5px;
-  
+
   font-weight: 600;
   text-align: left;
 }
 
 .connoriginal-direction-l .connoriginal-flag {
-  -webkit-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-  -moz-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-  box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+  -webkit-box-shadow:
+    -1px 1px 1px rgba(0, 0, 0, 0.15),
+    0 0 1px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow:
+    -1px 1px 1px rgba(0, 0, 0, 0.15),
+    0 0 1px rgba(0, 0, 0, 0.15);
+  box-shadow:
+    -1px 1px 1px rgba(0, 0, 0, 0.15),
+    0 0 1px rgba(0, 0, 0, 0.15);
 }
 
 .connoriginal-direction-r .connoriginal-flag {
-  -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-  -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-  box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+  -webkit-box-shadow:
+    1px 1px 1px rgba(0, 0, 0, 0.15),
+    0 0 1px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow:
+    1px 1px 1px rgba(0, 0, 0, 0.15),
+    0 0 1px rgba(0, 0, 0, 0.15);
+  box-shadow:
+    1px 1px 1px rgba(0, 0, 0, 0.15),
+    0 0 1px rgba(0, 0, 0, 0.15);
 }
-
 
 .connoriginal-direction-l .connoriginal-flag:after {
   content: "";
@@ -434,7 +445,7 @@ td.list-group-link {
   width: 0;
   margin-top: -8px;
   border: solid transparent;
-  border-left-color: rgb(248,248,248);
+  border-left-color: rgb(248, 248, 248);
   border-width: 8px;
   pointer-events: none;
 }
@@ -448,14 +459,14 @@ td.list-group-link {
   width: 0;
   margin-top: -8px;
   border: solid transparent;
-  border-right-color: rgb(248,248,248);
+  border-right-color: rgb(248, 248, 248);
   border-width: 8px;
   pointer-events: none;
 }
 
 .connoriginal-time-wrapper {
   display: inline;
-  
+
   line-height: 1em;
   font-size: 0.66666em;
   color: rgb(51, 0, 111);
@@ -473,7 +484,7 @@ td.list-group-link {
 .connoriginal-time {
   display: inline-block;
   padding: 4px 6px;
-  background: rgb(248,248,248);
+  background: rgb(248, 248, 248);
 }
 
 .connoriginal-desc {
@@ -527,7 +538,6 @@ td.list-group-link {
 }
 
 @media screen and (max-width: 660px) {
-
   .connoriginal-timeline {
     width: 100%;
     padding: 4em 0 1em 0;
@@ -550,10 +560,9 @@ td.list-group-link {
   }
 
   .connoriginal-flag {
-    background: rgb(255,255,255);
+    background: rgb(255, 255, 255);
     z-index: 15;
   }
-
 
   .connoriginal-direction-l .connoriginal-flag:after,
   .connoriginal-direction-r .connoriginal-flag:after {
@@ -565,7 +574,7 @@ td.list-group-link {
     width: 0;
     margin-left: -8px;
     border: solid transparent;
-    border-bottom-color: rgb(255,255,255);
+    border-bottom-color: rgb(255, 255, 255);
     border-width: 8px;
     pointer-events: none;
   }
@@ -589,11 +598,11 @@ td.list-group-link {
     position: relative;
     margin: 1em 0 0 0;
     padding: 1em;
-    background: rgb(245,245,245);
-    -webkit-box-shadow: 0 0 1px rgba(0,0,0,0.20);
-    -moz-box-shadow: 0 0 1px rgba(0,0,0,0.20);
-    box-shadow: 0 0 1px rgba(0,0,0,0.20);
-    
+    background: rgb(245, 245, 245);
+    -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+
     z-index: 15;
   }
 
@@ -602,7 +611,7 @@ td.list-group-link {
     position: relative;
     margin: 1em 1em 0 1em;
     padding: 1em;
-    
+
     z-index: 15;
   }
 }
@@ -613,10 +622,6 @@ td.list-group-link {
     margin: 1em 4em 0 4em;
   }
 }
-
-
-
-
 
 /*****************************
  * CV TOC styles
@@ -629,7 +634,6 @@ a.anchor {
   visibility: hidden;
 }
 
-
 span.badge-toc {
   color: var(--global-bg-color);
   background-color: var(--global-theme-color);
@@ -639,5 +643,3 @@ span.badge-toc {
   display: inline-block;
   inline-size: fit-content;
 }
-
-

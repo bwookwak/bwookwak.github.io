@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-:tada: Our paper <b>TRAIT</b> on LLM Personality Evaluation has been accepted to <b>NAACL 2025</b>. 
+:tada: Our paper <b>TRAIT</b> on LLM Personality Evaluation has been accepted to <b>NAACL 2025</b>.

@@ -14,6 +14,7 @@ nav_order: 2
 <!-- {% include bib_search.liquid %} -->
 
 <!-- Publication Statistics Charts -->
+
 {% include publication_charts.liquid %}
 
 <div class="publications">

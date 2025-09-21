@@ -111,7 +111,6 @@
 - title: Activities
   type: nested_list
   contents:
-
     - title: Reviewer
       items:
         - <b>AAAI</b>, <b>EMNLP</b>, <b>ACL</b>, <b>NAACL</b>
@@ -130,7 +129,6 @@
         - <b>Top Prize</b>, Software Capstone Design - Computer Science Department, Yonsei Univ
         - <b>Top Presentation Prize</b>, Yonsei Creative Exhibition Presentation - College of Engineering, Yonsei Univ
         - <b>Student Teaching Assistant Scholarship</b> (Head Professor TA) - Department of Artificial Intelligence, Yonsei Univ
-
 # - title: Academic Interests
 #   type: nested_list
 #   contents:
