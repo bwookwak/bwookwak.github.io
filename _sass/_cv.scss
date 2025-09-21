@@ -397,8 +397,75 @@ td.list-group-link {
 .connoriginal-flag-wrapper {
   position: relative;
   display: inline-block;
-
   text-align: center;
+}
+
+.connoriginal-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.connoriginal-logo-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.connoriginal-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  object-fit: contain;
+  background: white;
+  padding: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.connoriginal-title-institution {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.connoriginal-direction-r .connoriginal-title-institution {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.connoriginal-direction-r .connoriginal-header {
+  align-items: flex-start;
+}
+
+.connoriginal-direction-r .connoriginal-time-row {
+  justify-content: flex-start;
+}
+
+.connoriginal-title {
+  font-size: 1em;
+  line-height: 1.2;
+  margin-bottom: 2px;
+  position: relative;
+  z-index: 50 !important;
+  background: white;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.connoriginal-time-row {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 8px;
+}
+
+.connoriginal-logo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .connoriginal-flag {
@@ -466,35 +533,36 @@ td.list-group-link {
 
 .connoriginal-time-wrapper {
   display: inline;
-
   line-height: 1em;
   font-size: 0.66666em;
-  color: rgb(51, 0, 111);
-  vertical-align: middle;
-}
-
-.connoriginal-direction-l .connoriginal-time-wrapper {
-  float: left;
-}
-
-.connoriginal-direction-r .connoriginal-time-wrapper {
-  float: right;
+  color: #3b82f6 !important;
+  font-weight: 600;
 }
 
 .connoriginal-time {
   display: inline-block;
   padding: 4px 6px;
   background: rgb(248, 248, 248);
+  color: inherit;
 }
 
 .connoriginal-desc {
   margin: 1em 0.75em 0 0;
   font-size: 0.77777em;
   line-height: 1.5em;
+  text-align: left;
+}
+
+.connoriginal-direction-l .connoriginal-desc {
+  margin: 1em 0.75em 0 0;
+  text-align: right;
+  position: relative;
+  right: 0;
 }
 
 .connoriginal-direction-r .connoriginal-desc {
   margin: 1em 0 0 0.75em;
+  text-align: left;
 }
 
 /* ================ Connoriginal Timeline Media Queries ================ */
@@ -543,6 +611,10 @@ td.list-group-link {
     padding: 4em 0 1em 0;
   }
 
+  .connoriginal-timeline:before {
+    z-index: 1;
+  }
+
   .connoriginal-timeline li {
     padding: 2em 0;
   }
@@ -551,17 +623,61 @@ td.list-group-link {
   .connoriginal-direction-r {
     float: none;
     width: 100%;
-
     text-align: center;
+    margin: 0 auto;
+    padding: 0 20px;
   }
 
   .connoriginal-flag-wrapper {
     text-align: center;
+    position: relative;
+    z-index: 20;
+  }
+
+  .connoriginal-logo {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    z-index: 20;
+  }
+
+  .connoriginal-logo-title-row {
+    gap: 8px;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative;
+    z-index: 20;
+  }
+
+  .connoriginal-title-institution {
+    align-items: center !important;
+    text-align: center !important;
+    width: 100%;
+    position: relative;
+    z-index: 25;
+  }
+
+  .connoriginal-title {
+    position: relative;
+    z-index: 50 !important;
+    background: white !important;
+    padding: 2px 4px !important;
+    border-radius: 3px !important;
+    display: inline-block !important;
+  }
+
+  .connoriginal-header {
+    align-items: center !important;
+    width: 100%;
+    position: relative;
+    z-index: 20;
   }
 
   .connoriginal-flag {
     background: rgb(255, 255, 255);
-    z-index: 15;
+    z-index: 50 !important;
+    position: relative !important;
   }
 
   .connoriginal-direction-l .connoriginal-flag:after,
@@ -583,7 +699,9 @@ td.list-group-link {
     display: block;
     position: relative;
     margin: 4px 0 0 0;
-    z-index: 14;
+    z-index: 20;
+    text-align: center;
+    width: 100%;
   }
 
   .connoriginal-direction-l .connoriginal-time-wrapper {
@@ -596,30 +714,45 @@ td.list-group-link {
 
   .connoriginal-desc {
     position: relative;
-    margin: 1em 0 0 0;
+    margin: 1em auto 0 auto;
     padding: 1em;
     background: rgb(245, 245, 245);
     -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
-
-    z-index: 15;
+    text-align: center;
+    width: calc(100% - 4em);
+    max-width: 500px;
+    box-sizing: border-box;
+    left: 0;
+    right: 0;
+    z-index: 20;
   }
 
   .connoriginal-direction-l .connoriginal-desc,
   .connoriginal-direction-r .connoriginal-desc {
     position: relative;
-    margin: 1em 1em 0 1em;
+    margin: 1em auto 0 auto;
     padding: 1em;
-
-    z-index: 15;
+    text-align: center;
+    width: calc(100% - 4em);
+    max-width: 500px;
+    box-sizing: border-box;
+    z-index: 20;
+    left: 0;
+    right: 0;
   }
 }
 
 @media screen and (min-width: 400px) and (max-width: 660px) {
   .connoriginal-direction-l .connoriginal-desc,
   .connoriginal-direction-r .connoriginal-desc {
-    margin: 1em 4em 0 4em;
+    margin: 1em auto 0 auto;
+    text-align: center;
+    width: calc(100% - 6em);
+    max-width: 400px;
+    left: 0;
+    right: 0;
   }
 }
 

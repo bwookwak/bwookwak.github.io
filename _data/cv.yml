@@ -63,15 +63,17 @@
     - title: Research Scientist Intern
       institution: Microsoft Research Asia (MSRA)
       year: Jun 2025 - Dec 2025
+      logo: microsoft.png
       description:
         - "@Beijing, China"
-        - Worked on self-evolving tool agents and reinforcement learning
+        - Worked on self-evolving tool agents and agentic RL
         - "Mentors: Dr. Liang Wang, Dr. Nan Yang, Dr. Xingxing Zhang"
         - Government-funded collaborative research program (IITP)
 
     - title: Applied Scientist Intern
       institution: Amazon AGI
       year: Jun 2024 - Sep 2024
+      logo: amazon.png
       description:
         - "@Sunnyvale, CA, USA"
         - Return Internship
@@ -79,34 +81,42 @@
     - title: Applied Scientist Intern
       institution: Amazon Alexa AI
       year: Jun 2023 - Sep 2023
+      logo: amazon.png
       description:
         - "@Sunnyvale, CA, USA"
         - Worked on Tool-augmented LLMs
-        - "Mentors: Dr. Hann Wang, Dr. Nikolaos Malandrakis, Dr. Nagesh Panyam"
+        - "Mentors: Dr. Hann Wang, Dr. Nikolaos Malandrakis,"
+        - Dr. Nagesh Panyam
     - title: Ph.D. Student, Artificial Intelligence
       institution: Yonsei University
       year: Mar 2022 - Current
+      logo: yonsei.png
       description:
         - "@Seoul, Republic of Korea"
         - Advised by Prof. Jinyoung Yeo
     - title: M.S., Artificial Intelligence
       institution: Yonsei University
       year: Mar 2020 - Feb 2022
+      logo: yonsei.png
       description:
         - "@Seoul, Republic of Korea"
         - Advised by Prof. Jinyoung Yeo
-    - title: Exchange Student Program
+    - title: Exchange Student
       institution: University of California
       year: Jan 2018 - Jul 2018
+      logo: ucsc.jpg
       description:
-        - "@Santa Cruz, The United States of America"
+        - "@Santa Cruz, CA, USA"
         - International exchange program
     - title: B.S., Computer Science
       institution: Yonsei University
       year: Mar 2014 - Feb 2022
+      logo: yonsei.png
       description:
         - "@Seoul, Republic of Korea"
-        - Compulsory military service in the Republic of Korea Army (Oct 2015 - Jul 2017)
+        - Compulsory military service 
+        - in the Republic of Korea Army during B.S.
+        - (Oct 2015 - Jul 2017)
 
 - title: Activities
   type: nested_list
