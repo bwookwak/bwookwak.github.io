@@ -108,15 +108,21 @@
       description:
         - "@Santa Cruz, CA, USA"
         - International exchange program
+    - title: Sergeant
+      institution: Republic of Korea Army
+      year: Oct 2015 - Jul 2017
+      logo: army.png
+      description:
+        - "@Seoul, Republic of Korea"
+        - Compulsory military service during B.S.
+        - in the Republic of Korea Army 
     - title: B.S., Computer Science
       institution: Yonsei University
       year: Mar 2014 - Feb 2022
       logo: yonsei.png
       description:
         - "@Seoul, Republic of Korea"
-        - Compulsory military service 
-        - in the Republic of Korea Army during B.S.
-        - (Oct 2015 - Jul 2017)
+
 
 - title: Activities
   type: nested_list
