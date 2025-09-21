@@ -1,97 +1,151 @@
-- title: General Information
-  type: map
+# - title: General Information
+#   type: map
+#   contents:
+#     - name: Full Name
+#       value: Beong-woo Kwak
+#     - name: Languages
+#       value: Korean, English
+
+# - title: Timeline
+#   type: timeline
+#   contents:
+#     - title: Research Scientist Intern
+#       institution: Microsoft Research Asia (MSRA), Beijing, China
+#       year: Jun 2025 - Dec 2025
+#       description:
+#         - Worked on self-evolving tool agents and reinforcement learning
+#         - "Mentors: Dr. Liang Wang, Dr. Nan Yang, Dr. Xingxing Zhang"
+#         - Government-funded collaborative research program (IITP)
+
+#     - title: Applied Scientist Intern
+#       institution: Amazon AGI Foundational Models Group, Sunnyvale, CA, USA
+#       year: Jun 2024 - Sep 2024
+#       description:
+#         - Return Internship
+#         - Worked on Code LLMs
+#     - title: Applied Scientist Intern
+#       institution: Amazon Alexa AI, Sunnyvale, CA, USA
+#       year: Jun 2023 - Sep 2023
+#       description:
+#         - Worked on Tool-augmented LLMs
+#         - "Mentors: Dr. Hann Wang, Dr. Nikolaos Malandrakis, Dr. Nagesh Panyam"
+#     - title: Ph.D. Student, Artificial Intelligence
+#       institution: Yonsei University, Seoul, Republic of Korea
+#       year: Mar 2022 - Current
+#       description:
+#         - Advised by Prof. Jinyoung Yeo
+#     - title: M.S., Artificial Intelligence
+#       institution: Yonsei University, Seoul, Republic of Korea
+#       year: Mar 2020 - Feb 2022
+#       description:
+#         - Advised by Prof. Jinyoung Yeo
+#     - title: Exchange Student Program
+#       institution: University of California, Santa Cruz, The United States of America
+#       year: Jan 2018 - Jul 2018
+#       description:
+#         - International exchange program
+#     - title: B.S., Computer Science
+#       institution: Yonsei University, Seoul, Republic of Korea
+#       year: Mar 2014 - Feb 2022
+#       description:
+#         - Compulsory military service in the Republic of Korea Army (Oct 2015 - Jul 2017)
+
+# - title: Open Source Projects
+#   type: time_table
+#   contents:
+#     - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
+#       year: 2015-now
+#       description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+
+- title: Experience & Educational Timeline
+  type: connoriginal_timeline
   contents:
-    - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
-    - name: Languages
-      value: English, German
-
-- title: Education
-  type: time_table
-  contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: Research Scientist Intern
+      institution: Microsoft Research Asia (MSRA)
+      year: Jun 2025 - Dec 2025
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+        - "@Beijing, China"
+        - Worked on self-evolving tool agents and reinforcement learning
+        - "Mentors: Dr. Liang Wang, Dr. Nan Yang, Dr. Xingxing Zhang"
+        - Government-funded collaborative research program (IITP)
+
+    - title: Applied Scientist Intern
+      institution: Amazon AGI
+      year: Jun 2024 - Sep 2024
       description:
-        - Description 1.
-        - Description 2.
-
-- title: Experience
-  type: time_table
-  contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+        - "@Sunnyvale, CA, USA"
+        - Return Internship
+        - Worked on Code LLMs
+    - title: Applied Scientist Intern
+      institution: Amazon Alexa AI
+      year: Jun 2023 - Sep 2023
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        - "@Sunnyvale, CA, USA"
+        - Worked on Tool-augmented LLMs
+        - "Mentors: Dr. Hann Wang, Dr. Nikolaos Malandrakis, Dr. Nagesh Panyam"
+    - title: Ph.D. Student, Artificial Intelligence
+      institution: Yonsei University
+      year: Mar 2022 - Current
       description:
-        - Description 1.
-        - Description 2.
-
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
+        - "@Seoul, Republic of Korea"
+        - Advised by Prof. Jinyoung Yeo
+    - title: M.S., Artificial Intelligence
+      institution: Yonsei University
+      year: Mar 2020 - Feb 2022
       description:
+        - "@Seoul, Republic of Korea"
+        - Advised by Prof. Jinyoung Yeo
+    - title: Exchange Student Program
+      institution: University of California
+      year: Jan 2018 - Jul 2018
+      description:
+        - "@Santa Cruz, The United States of America"
+        - International exchange program
+    - title: B.S., Computer Science
+      institution: Yonsei University
+      year: Mar 2014 - Feb 2022
+      description:
+        - "@Seoul, Republic of Korea"
+        - Compulsory military service in the Republic of Korea Army (Oct 2015 - Jul 2017)
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
-  type: time_table
-  contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
-
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
-      items:
-        - Max Planck Medal
-
-- title: Academic Interests
+- title: Activities
   type: nested_list
   contents:
-    - title: Topic 1.
-      items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
-      items:
-        - Description 1.
-        - Description 2.
 
-- title: Other Interests
-  type: list
-  contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - title: Reviewer
+      items:
+        - <b>AAAI</b>, <b>EMNLP</b>, <b>ACL</b>, <b>NAACL</b>
+    - title: Teaching Experiences
+      items:
+        - "<b>NVIDIA</b>: Teaching Assistant on NLP"
+        - "<b>Teaching Assistant at Yonsei Univ</b>: Text and Language Understanding, Big Data, Natural Language Processing"
+    - title: Company Experiences
+      items:
+        - <b>Microsoft Research Asia (MSRA)</b>, Beijing, China - Research Scientist Intern (Jun 2025 - Dec 2025)
+        - <b>Amazon AGI Foundational Models Group</b>, Sunnyvale, CA, USA - Applied Scientist Intern (Jun 2024 - Sep 2024)
+        - <b>Amazon Alexa AI</b>, Sunnyvale, CA, USA - Applied Scientist Intern (Jun 2023 - Sep 2023)
+    - title: Honors and Awards
+      items:
+        - <b>Encouragement Prize</b>, Korea Capstone Design Fair (As a representative of Yonsei University) - Ministry of Trade, Industry and Energy, Korea
+        - <b>Top Prize</b>, Software Capstone Design - Computer Science Department, Yonsei Univ
+        - <b>Top Presentation Prize</b>, Yonsei Creative Exhibition Presentation - College of Engineering, Yonsei Univ
+        - <b>Student Teaching Assistant Scholarship</b> (Head Professor TA) - Department of Artificial Intelligence, Yonsei Univ
+
+# - title: Academic Interests
+#   type: nested_list
+#   contents:
+#     - title: Natural Language Processing
+#       items:
+#         - Conversational AI
+#         - Personalized agents
+#         - Code/Tool-learning
+#     - title: Machine Learning
+#       items:
+#         - Efficient and scalable training
+#         - Evaluation under evolving environments
+#         - Knowledge distillation
+
+# - title: Other Interests
+#   type: list
+#   contents:
+#     - <u>Research Focus:</u> NLP, Conversational AI, Personalized agents, Code/Tool-learning

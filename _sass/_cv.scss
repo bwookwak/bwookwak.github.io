@@ -2,6 +2,49 @@
  * CV shared styles
  *****************************/
 
+/* Plain CV styles for about page */
+.cv-section {
+  margin-bottom: 2rem;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+.cv-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--global-text-color);
+  border-bottom: 2px solid var(--global-theme-color);
+  padding-bottom: 0.5rem;
+}
+
+.cv-content {
+  margin-left: 0;
+  padding: 0;
+}
+
+/* Custom nested list styles for Activities */
+.cv-content .list-group-flush .list-group-item {
+  border: none;
+  padding: 0.5rem 0;
+}
+
+.cv-content .list-group-flush .list-group-item h5 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.cv-content .list-group-flush .subitems {
+  margin-left: 1rem;
+  margin-bottom: 0;
+}
+
+.cv-content .list-group-flush .subitems li {
+  padding: 0.25rem 0;
+  border: none;
+}
+
 div.container-link-button {
   margin-right: 0.5rem;
 }
@@ -151,6 +194,431 @@ td.list-group-link {
 }
 
 /*****************************
+ * CV TIMELINE styles
+ *****************************/
+
+.timeline-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--global-theme-color);
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  margin: 30px 0;
+}
+
+.timeline-item-left {
+  width: 50%;
+  padding-right: 20px;
+  text-align: right;
+}
+
+.timeline-item-right {
+  left: 50%;
+  width: 50%;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.timeline-item-left::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border: 2px solid var(--global-theme-color);
+  border-radius: 50%;
+  top: 50%;
+  right: -1.4%;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.timeline-item-right::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border: 2px solid var(--global-theme-color);
+  border-radius: 50%;
+  top: 50%;
+  left: -1.4%;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.timeline-content {
+  background: #f8f9fa;
+  padding: 10px 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  min-width: 350px;
+}
+
+.timeline-content-left {
+  margin-right: 5%;
+  width: 100%;
+}
+
+.timeline-content-right {
+  margin-left: 5%;
+  width: 100%;
+}
+
+.timeline-content:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.timeline-title {
+  margin-bottom: 8px;
+  color: var(--global-text-color);
+  display: inline;
+}
+
+.timeline-year-badge {
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: var(--global-theme-color);
+  background: var(--global-bg-color);
+  border: 1px solid var(--global-theme-color);
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-left: 8px;
+  white-space: nowrap;
+}
+
+.timeline-institution {
+  margin-bottom: 8px;
+  color: var(--global-text-color-light);
+  font-size: 0.9rem;
+}
+
+.timeline-institution i {
+  margin-right: 5px;
+  color: var(--global-theme-color);
+}
+
+.timeline-description {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover .timeline-description {
+  max-height: 200px;
+  opacity: 1;
+  margin-top: 8px;
+}
+
+.timeline-item-desc {
+  margin-bottom: 4px;
+}
+
+.timeline-item-desc:last-child {
+  margin-bottom: 0;
+}
+
+/* ================ Connoriginal Timeline Styles ================ */
+.connoriginal-timeline {
+  position: relative;
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 1em 0;
+  list-style-type: none;
+}
+
+.connoriginal-timeline:before {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  content: ' ';
+  display: block;
+  width: 6px;
+  height: 100%;
+  margin-left: -3px;
+  background: rgb(80,80,80);
+  background: -moz-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(125,185,232,1)));
+  background: -webkit-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+  background: -o-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+  background: -ms-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+  background: linear-gradient(to bottom, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+  
+  z-index: 5;
+}
+
+.connoriginal-timeline li {
+  padding: 1em 0;
+}
+
+.connoriginal-timeline li:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.connoriginal-direction-l {
+  position: relative;
+  width: 370px;
+  float: left;
+  text-align: right;
+}
+
+.connoriginal-direction-r {
+  position: relative;
+  width: 370px;
+  float: right;
+}
+
+.connoriginal-flag-wrapper {
+  position: relative;
+  display: inline-block;
+  
+  text-align: center;
+}
+
+.connoriginal-flag {
+  position: relative;
+  display: inline;
+  background: rgb(248,248,248);
+  padding: 6px 10px;
+  border-radius: 5px;
+  
+  font-weight: 600;
+  text-align: left;
+}
+
+.connoriginal-direction-l .connoriginal-flag {
+  -webkit-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+  -moz-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+  box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+}
+
+.connoriginal-direction-r .connoriginal-flag {
+  -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+  -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+}
+
+
+.connoriginal-direction-l .connoriginal-flag:after {
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  height: 0;
+  width: 0;
+  margin-top: -8px;
+  border: solid transparent;
+  border-left-color: rgb(248,248,248);
+  border-width: 8px;
+  pointer-events: none;
+}
+
+.connoriginal-direction-r .connoriginal-flag:after {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  height: 0;
+  width: 0;
+  margin-top: -8px;
+  border: solid transparent;
+  border-right-color: rgb(248,248,248);
+  border-width: 8px;
+  pointer-events: none;
+}
+
+.connoriginal-time-wrapper {
+  display: inline;
+  
+  line-height: 1em;
+  font-size: 0.66666em;
+  color: rgb(51, 0, 111);
+  vertical-align: middle;
+}
+
+.connoriginal-direction-l .connoriginal-time-wrapper {
+  float: left;
+}
+
+.connoriginal-direction-r .connoriginal-time-wrapper {
+  float: right;
+}
+
+.connoriginal-time {
+  display: inline-block;
+  padding: 4px 6px;
+  background: rgb(248,248,248);
+}
+
+.connoriginal-desc {
+  margin: 1em 0.75em 0 0;
+  font-size: 0.77777em;
+  line-height: 1.5em;
+}
+
+.connoriginal-direction-r .connoriginal-desc {
+  margin: 1em 0 0 0.75em;
+}
+
+/* ================ Connoriginal Timeline Media Queries ================ */
+
+@media screen and (max-width: 1000px) {
+  .connoriginal-timeline {
+    width: 640px;
+  }
+
+  .connoriginal-direction-l {
+    position: relative;
+    width: 290px;
+    float: left;
+    text-align: right;
+  }
+
+  .connoriginal-direction-r {
+    position: relative;
+    width: 290px;
+    float: right;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .connoriginal-timeline {
+    width: 620px;
+  }
+
+  .connoriginal-direction-l {
+    position: relative;
+    width: 280px;
+    float: left;
+    text-align: right;
+  }
+
+  .connoriginal-direction-r {
+    position: relative;
+    width: 280px;
+    float: right;
+  }
+}
+
+@media screen and (max-width: 660px) {
+
+  .connoriginal-timeline {
+    width: 100%;
+    padding: 4em 0 1em 0;
+  }
+
+  .connoriginal-timeline li {
+    padding: 2em 0;
+  }
+
+  .connoriginal-direction-l,
+  .connoriginal-direction-r {
+    float: none;
+    width: 100%;
+
+    text-align: center;
+  }
+
+  .connoriginal-flag-wrapper {
+    text-align: center;
+  }
+
+  .connoriginal-flag {
+    background: rgb(255,255,255);
+    z-index: 15;
+  }
+
+
+  .connoriginal-direction-l .connoriginal-flag:after,
+  .connoriginal-direction-r .connoriginal-flag:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -8px;
+    height: 0;
+    width: 0;
+    margin-left: -8px;
+    border: solid transparent;
+    border-bottom-color: rgb(255,255,255);
+    border-width: 8px;
+    pointer-events: none;
+  }
+
+  .connoriginal-time-wrapper {
+    display: block;
+    position: relative;
+    margin: 4px 0 0 0;
+    z-index: 14;
+  }
+
+  .connoriginal-direction-l .connoriginal-time-wrapper {
+    float: none;
+  }
+
+  .connoriginal-direction-r .connoriginal-time-wrapper {
+    float: none;
+  }
+
+  .connoriginal-desc {
+    position: relative;
+    margin: 1em 0 0 0;
+    padding: 1em;
+    background: rgb(245,245,245);
+    -webkit-box-shadow: 0 0 1px rgba(0,0,0,0.20);
+    -moz-box-shadow: 0 0 1px rgba(0,0,0,0.20);
+    box-shadow: 0 0 1px rgba(0,0,0,0.20);
+    
+    z-index: 15;
+  }
+
+  .connoriginal-direction-l .connoriginal-desc,
+  .connoriginal-direction-r .connoriginal-desc {
+    position: relative;
+    margin: 1em 1em 0 1em;
+    padding: 1em;
+    
+    z-index: 15;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 660px) {
+  .connoriginal-direction-l .connoriginal-desc,
+  .connoriginal-direction-r .connoriginal-desc {
+    margin: 1em 4em 0 4em;
+  }
+}
+
+
+
+
+
+/*****************************
  * CV TOC styles
  *****************************/
 
@@ -161,17 +629,6 @@ a.anchor {
   visibility: hidden;
 }
 
-ul.timeline {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-ul.timeline li {
-  position: relative;
-  min-height: 2.2rem;
-  color: var(--global-text-color);
-  list-style-position: inside;
-}
 
 span.badge-toc {
   color: var(--global-bg-color);
@@ -183,38 +640,4 @@ span.badge-toc {
   inline-size: fit-content;
 }
 
-ul.timeline li::before {
-  content: "";
-  min-height: 2.5rem;
-  width: 1px;
-  background: var(--global-text-color);
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  left: 2px;
-  top: -0.5rem;
-}
 
-/*ul.timeline::before {
-     content: "●";
-     font-size: 1em;
-     display: inline-block;
-     margin: 0;
-     padding: 0;
-     position: relative;
-     left: -2px;
-     top: 0.4rem;
-     color: var(--global-text-color);
-}
- ul.timeline::after {
-     content: "●";
-     font-size: 1em;
-     display: inline-block;
-     margin: 0;
-     padding: 0;
-     position: relative;
-     left: -2px;
-     top: -1rem;
-     color: var(--global-text-color);
-}
-*/

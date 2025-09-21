@@ -1,0 +1,38 @@
+# Publication Statistics Data
+# 연도별 논문 통계
+yearly_stats:
+  2022:
+    journal: 0
+    conference: 3
+    workshop: 0
+    arxiv: 0
+  2023:
+    journal: 0
+    conference: 0
+    workshop: 0
+    arxiv: 0
+  2024:
+    journal: 0
+    conference: 3
+    workshop: 0
+    arxiv: 0
+  2025:
+    journal: 0
+    conference: 6
+    workshop: 0
+    arxiv: 1
+
+# 상위 학회별 통계 (Journal + Conference만)
+venue_stats:
+  - name: "EMNLP"
+    count: 3
+  - name: "ACL"
+    count: 4
+  - name: "NeurIPS"
+    count: 1
+  - name: "AAAI"
+    count: 2
+  - name: "NAACL"
+    count: 2
+  - name: "Other"
+    count: 0

@@ -1,0 +1,147 @@
+<!-- Publication Statistics Charts -->
+<div class="publication-charts" style="margin-bottom: 30px;">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="chart-container" style="text-align: center;">
+        <h4 style="margin-bottom: 15px; color: #666; font-size: 16px;">Publications by Year</h4>
+        <div style="width: 100%; height: 200px; position: relative;">
+          <canvas id="publicationsChart"></canvas>
+        </div>
+        <div id="cumulativeInfo" style="margin-top: 10px; font-size: 12px; color: #666;">
+          <!-- Cumulative info will be populated by JavaScript -->
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="chart-container" style="text-align: center;">
+        <h4 style="margin-bottom: 15px; color: #666; font-size: 16px;">Top Venues (J+C)</h4>
+        <div style="width: 100%; height: 200px; position: relative;">
+          <canvas id="venuesChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Get data from YAML
+  const yearlyStats = {{ site.data.publication_stats.yearly_stats | jsonify }};
+  const venueStats = {{ site.data.publication_stats.venue_stats | jsonify }};
+  
+  console.log('Yearly stats:', yearlyStats);
+  console.log('Venue stats:', venueStats);
+
+  // Create year chart data
+  const years = Object.keys(yearlyStats).sort();
+  const journalData = years.map(year => yearlyStats[year].journal || 0);
+  const conferenceData = years.map(year => yearlyStats[year].conference || 0);
+  const workshopData = years.map(year => yearlyStats[year].workshop || 0);
+  const arxivData = years.map(year => yearlyStats[year].arxiv || 0);
+  
+  // Calculate cumulative totals
+  const cumulativeData = [];
+  let cumulative = 0;
+  for (let i = 0; i < years.length; i++) {
+    cumulative += (journalData[i] + conferenceData[i] + workshopData[i] + arxivData[i]);
+    cumulativeData.push(cumulative);
+  }
+
+  // Create cumulative publications chart
+  const ctx1 = document.getElementById('publicationsChart').getContext('2d');
+  new Chart(ctx1, {
+    type: 'line',
+    data: {
+      labels: years,
+      datasets: [
+        {
+          label: 'Cumulative Publications',
+          data: cumulativeData,
+          borderColor: 'rgba(37, 99, 235, 1)',
+          backgroundColor: 'rgba(37, 99, 235, 0.1)',
+          borderWidth: 3,
+          fill: true,
+          pointRadius: 5,
+          pointBackgroundColor: 'rgba(37, 99, 235, 1)',
+          pointBorderColor: 'rgba(37, 99, 235, 1)',
+          tension: 0.1
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          display: true,
+          position: 'top'
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+
+  // Display cumulative information
+  const cumulativeInfo = document.getElementById('cumulativeInfo');
+  const totalPublications = cumulativeData[cumulativeData.length - 1];
+  cumulativeInfo.innerHTML = `Total: ${totalPublications} publications`;
+
+  // Create venues chart (filter out venues with count 0)
+  const filteredVenueStats = venueStats.filter(venue => venue.count > 0);
+  const venueNames = filteredVenueStats.map(venue => venue.name);
+  const venueCounts = filteredVenueStats.map(venue => venue.count);
+  
+  const ctx2 = document.getElementById('venuesChart').getContext('2d');
+  new Chart(ctx2, {
+    type: 'horizontalBar',
+    data: {
+      labels: venueNames,
+      datasets: [{
+        label: 'Publications',
+        data: venueCounts,
+        backgroundColor: [
+          'rgba(59, 130, 246, 0.7)',
+          'rgba(16, 185, 129, 0.7)', 
+          'rgba(245, 101, 101, 0.7)',
+          'rgba(251, 191, 36, 0.7)',
+          'rgba(139, 92, 246, 0.7)',
+          'rgba(236, 72, 153, 0.7)',
+          'rgba(34, 197, 94, 0.7)',
+          'rgba(249, 115, 22, 0.7)'
+        ],
+        borderWidth: 0
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false }
+      },
+      scales: {
+        xAxes: [{
+          ticks: { 
+            beginAtZero: true,
+            min: 0,
+            max: Math.max(...venueCounts) + 1,
+            stepSize: 1,
+            fontSize: 10,
+            callback: function(value, index, values) {
+              return Number.isInteger(value) ? value : '';
+            }
+          }
+        }],
+        yAxes: [{
+          ticks: { 
+            fontSize: 10
+          }
+        }]
+      }
+    }
+  });
+});
+</script>

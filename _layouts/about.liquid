@@ -42,26 +42,67 @@ layout: default
 
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
-      <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
-      </h2>
-      {% include news.liquid limit=true %}
+      <div class="cv-section">
+        <h3 class="cv-title">
+          <a href="{{ '/news/' | relative_url }}" style="color: inherit">News</a>
+        </h3>
+        <div class="cv-content">
+          {% include news.liquid limit=true %}
+        </div>
+      </div>
     {% endif %}
 
     <!-- Latest posts -->
     {% if page.latest_posts and page.latest_posts.enabled %}
-      <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
-      </h2>
-      {% include latest_posts.liquid %}
+      <div class="cv-section">
+        <h3 class="cv-title">
+          <a href="{{ '/blog/' | relative_url }}" style="color: inherit">Latest Posts</a>
+        </h3>
+        <div class="cv-content">
+          {% include latest_posts.liquid %}
+        </div>
+      </div>
+    {% endif %}
+
+    <!-- CV -->
+    {% if page.cv %}
+      <div class="cv">
+        {% for entry in site.data.cv %}
+          <a class="anchor" id="{{ entry.title }}"></a>
+          <div class="cv-section">
+            <h3 class="cv-title">{{ entry.title }}</h3>
+            <div class="cv-content">
+              {% if entry.type == 'list' %}
+                {% include cv/list.liquid %}
+              {% elsif entry.type == 'map' %}
+                {% include cv/map.liquid %}
+              {% elsif entry.type == 'nested_list' %}
+                {% include cv/nested_list.liquid %}
+              {% elsif entry.type == 'time_table' %}
+                {% include cv/time_table.liquid %}
+              {% elsif entry.type == 'connoriginal_timeline' %}
+                {% include cv/connoriginal_timeline.liquid %}
+              {% elsif entry.type == 'list_groups' %}
+                {% include cv/list_groups.liquid %}
+              {% else %}
+                {{ entry.contents }}
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
     {% endif %}
 
     <!-- Selected papers -->
     {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
-      </h2>
-      {% include selected_papers.liquid %}
+      <div class="cv-section">
+        <h3 class="cv-title">
+          <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Publications</a>
+        </h3>
+        <div class="cv-content">
+          {% include selected_papers.liquid %}
+        </div>
+      </div>
     {% endif %}
 
     <!-- Social -->
