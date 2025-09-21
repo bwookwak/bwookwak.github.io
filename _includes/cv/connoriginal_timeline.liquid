@@ -4,39 +4,39 @@
     {% assign is_even = forloop.index0 | modulo: 2 %}
     <li>
       {% if is_even == 0 %}
-      <div class="connoriginal-direction-l">
-        <div class="connoriginal-flag-wrapper">
-          <span class="connoriginal-flag">{{ content.institution }}</span>
-          <span class="connoriginal-time-wrapper"><span class="connoriginal-time">{{ content.year }}</span></span>
+        <div class="connoriginal-direction-l">
+          <div class="connoriginal-flag-wrapper">
+            <span class="connoriginal-flag">{{ content.institution }}</span>
+            <span class="connoriginal-time-wrapper"><span class="connoriginal-time">{{ content.year }}</span></span>
+          </div>
+          <div class="connoriginal-desc">
+            <b>{{ content.title }}</b>
+            {% if content.description %}
+              <br />
+              {% for item in content.description %}
+                {{ item }}
+                {% unless forloop.last %}<br />{% endunless %}
+              {% endfor %}
+            {% endif %}
+          </div>
         </div>
-        <div class="connoriginal-desc">
-          <b>{{ content.title }}</b>
-          {% if content.description %}
-            <br/> 
-            {% for item in content.description %}
-              {{ item }}
-              {% unless forloop.last %}<br/>{% endunless %}
-            {% endfor %}
-          {% endif %}
-        </div>
-      </div>
       {% else %}
-      <div class="connoriginal-direction-r">
-        <div class="connoriginal-flag-wrapper">
-          <span class="connoriginal-flag">{{ content.institution }}</span>
-          <span class="connoriginal-time-wrapper"><span class="connoriginal-time">{{ content.year }}</span></span>
+        <div class="connoriginal-direction-r">
+          <div class="connoriginal-flag-wrapper">
+            <span class="connoriginal-flag">{{ content.institution }}</span>
+            <span class="connoriginal-time-wrapper"><span class="connoriginal-time">{{ content.year }}</span></span>
+          </div>
+          <div class="connoriginal-desc">
+            <b>{{ content.title }}</b>
+            {% if content.description %}
+              <br />
+              {% for item in content.description %}
+                {{ item }}
+                {% unless forloop.last %}<br />{% endunless %}
+              {% endfor %}
+            {% endif %}
+          </div>
         </div>
-        <div class="connoriginal-desc">
-          <b>{{ content.title }}</b>
-          {% if content.description %}
-            <br/> 
-            {% for item in content.description %}
-              {{ item }}
-              {% unless forloop.last %}<br/>{% endunless %}
-            {% endfor %}
-          {% endif %}
-        </div>
-      </div>
       {% endif %}
     </li>
   {% endfor %}
