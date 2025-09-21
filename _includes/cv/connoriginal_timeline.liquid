@@ -1,28 +1,28 @@
 <!-- The Connoriginal Timeline -->
 <ul class="connoriginal-timeline">
   {% for content in entry.contents %}
-  <li>
     {% assign is_even = forloop.index0 | modulo: 2 %}
-    {% if is_even == 0 %}
-    <div class="connoriginal-direction-l">
-    {% else %}
-    <div class="connoriginal-direction-r">
-    {% endif %}
-      <div class="connoriginal-flag-wrapper">
-        <span class="connoriginal-flag">{{ content.institution }}</span>
-        <span class="connoriginal-time-wrapper"><span class="connoriginal-time">{{ content.year }}</span></span>
-      </div>
-      <div class="connoriginal-desc">
-        <b>{{ content.title }}</b>
-        {% if content.description %}
-          <br/> 
-          {% for item in content.description %}
-            {{ item }}
-            {% unless forloop.last %}<br/>{% endunless %}
-          {% endfor %}
-        {% endif %}
-      </div>
-    </div>
-  </li>
+    <li>
+      {% if is_even == 0 %}
+        <div class="connoriginal-direction-l">
+      {% else %}
+        <div class="connoriginal-direction-r">
+      {% endif %}
+        <div class="connoriginal-flag-wrapper">
+          <span class="connoriginal-flag">{{ content.institution }}</span>
+          <span class="connoriginal-time-wrapper"><span class="connoriginal-time">{{ content.year }}</span></span>
+        </div>
+        <div class="connoriginal-desc">
+          <b>{{ content.title }}</b>
+          {% if content.description %}
+            <br/> 
+            {% for item in content.description %}
+              {{ item }}
+              {% unless forloop.last %}<br/>{% endunless %}
+            {% endfor %}
+          {% endif %}
+        </div>
+        </div>
+    </li>
   {% endfor %}
 </ul>
