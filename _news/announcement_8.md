@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-:tada: Our <strong>"ToolHaystack"</strong> on the Long-term Interaction of Tool-augmented Lnguage Models is accepted to <strong>EMNLP 2025</strong>. See you at Suzhou!
+:tada: Our <strong>"ToolHaystack"</strong> on the Long-term Interaction of Tool-augmented Language Models is accepted to <strong>EMNLP 2025</strong>. See you at Suzhou!
