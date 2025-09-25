@@ -67,7 +67,7 @@ ninja.data = [{
           section: "News",},{id: "news-tada-our-toolhaystack-on-the-long-term-interaction-of-tool-augmented-lnguage-models-is-accepted-to-emnlp-2025-see-you-at-suzhou",
           title: ':tada: Our “ToolHaystack” on the Long-term Interaction of Tool-augmented Lnguage Models is accepted...',
           description: "",
-          section: "News",},{id: "news-tada-our-web-sheperd-on-the-process-reward-model-of-web-agent-got-accepted-to-neuips-2025-spotlight",
+          section: "News",},{id: "news-tada-our-web-sheperd-on-the-process-reward-model-of-web-agent-got-accepted-to-neurips-2025-spotlight",
           title: ':tada: Our “Web-Sheperd” on the Process Reward Model of Web Agent got accepted...',
           description: "",
           section: "News",},{id: "projects-project-1",
