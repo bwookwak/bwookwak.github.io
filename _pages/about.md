@@ -30,8 +30,8 @@ announcements:
 
 Hello! I am a Ph.D student in AI at Yonsei University, advised by **Prof. Jinyoung Yeo**.
 
-My research interest is in **NLP**, focusing on **Conversational AI** where knowledge, reasoning, and interaction come into play. In particular, I'm interested in:
-
-1. **Personalized agents** that can perform/develop/be maintained in a lifelong manner,
-2. **Code / Tool-learning**,
-3. **Efficient, scalable training/evaluation** under evolving environments.
+My research interest is in the field of Language Models and Agents. Especially, I am interested in:
+(1) **Agents** that can interact with various environments (Tool, Code, Web, ...),
+(2) **Personalization and Agent Memory**,
+(3) **Open-world Adaptation of Agents**: Efficient and scalable training/evaluation mechanisms under
+unknown or evolving environments.
